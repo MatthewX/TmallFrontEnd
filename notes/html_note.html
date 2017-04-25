@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+中文
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+</head>
+
+标题: 自动粗体，大写其中的内容，并且带有换行效果
+<h1>标题1</h1>
+<h2>标题2</h2>
+<h3>标题3</h3>
+<h4>标题4</h4>
+<h5>标题5</h5>
+
+段落: 自带换行效果
+<p></p>
+
+粗体
+<b>b标签粗体效果</b>
+<strong>strong标签粗体效果</strong>
+
+斜体
+<i>使用 i 标签带来的斜体效果</i>
+<em>使用 em 标签带来的斜体效果</em>
+
+预格式: 需要在网页上显示代码，比如java代码
+<pre>
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+</pre>
+
+删除
+<del>使用del标签实现的删除效果</del>
+
+下划线
+<ins>使用ins标签实现的下划线效果</ins>
+
+图像
+<img src="http://how2j.cn/example.gif"/>
+
+超链接
+<a href="http://www.12306.com">12306</a>
+
+
+表格
+<table border="1" width="200px" >
+    <tr bgcolor="gray>
+        <td width="50px" align="left" valign="top">1</td>
+    <td>2</td>
+    </tr>
+
+    <tr>
+        <td colspan="2">3</td>
+        <td>4</td>
+    </tr>
+
+    <tr>
+        <td rowspan="2">a</td>
+        <td>b</td>
+    </tr>
+</table>
+
+
+列表: 无序, 有序
+<ul>
+    <li>DOTA</li>
+    <li>LOL</li>
+</ul>
+
+<ol>
+    <li>地卜师</li>
+    <li>卡尔</li>
+</ol>
+
+
+块: 通常是用来结合css进行页面布局
+
+<div> 这是一个div </div>
+<span>这是一个span</span>
+
+<div style="margin-left:100px" >
+    <img src="http://how2j.cn/example.gif"/>
+    <br/>
+    <img src="http://how2j.cn/example.gif"/>
+</div>
+div是块元素，即自动换行
+常见的块元素还有h1,table,p
+span是内联元素，即不会换行
+常见的内联元素还有img,a,b,strong
+
+
+字体
+<font color="green">绿色默认大小字体</font>
+<br>
+<font color="blue" size="+2">蓝色大2号字体</font>
+<br>
+<font color="red" size="-2">红色小2号字体</font>
+
+
+内联框架: 可以实现在网页中“插入”网页
+<iframe src="http://how2j.cn/" width="600px" height="400px">
+</iframe>
+
+
+
+
+表单元素
+
+文本框: 长度, 初始值, 背景值
+<input type="text" size="10" value="有初始值的文本框" placeholder="请输入账号">
+
+密码框
+<input type="password">
+
+表单
+<form action="http://how2j.cn/study/login.jsp">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="submit" value="登陆">
+</form>
+
+
+单选框
+分组即，多个单选框，都在一个分组里，同一时间，只能选中一个单选框
+设置name属性相同即可
+value是提交到服务端的值，选择这些多选框，最终目的是要提交到服务器，那么value就是提交过去的值
+<p>今天晚上做什么？</p>
+学习java<input type="radio" name="activity" value="学习java" > <br/>
+东京热<input type="radio" checked="checked"  name="activity" value="tokyohot" > <br/>
+dota<input type="radio" name="activity" value="dota" > <br/>
+LOL<input type="radio" name="activity"  value="lol"> <br/>
+
+
+复选框
+<p>今天晚上做什么？</p>
+学习java<input type="checkbox" value="学习java" > <br/>
+东京热<input type="checkbox" checked="checked"  name="activity" value="tokyohot" > <br/>
+dota<input type="checkbox" value="dota" > <br/>
+LOL<input type="checkbox" value="lol"> <br/>
+
+
+下拉列表: multiple可多选, selected默认选中
+<select size="3" multiple="multiple">
+    <option>苍老师</option>
+    <option selected="selected">高树玛利亚</option>
+    <option>遥美</option>
+</select>
+
+
+
+
+文本域
+<textarea cols="30" rows="8">123456789012345678901234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890</textarea>
+
+
+普通按钮: 无法提交
+<input type="button" value="一个按钮">
+
+提交按钮
+<input type="submit" value="登陆">
+
+重置按钮
+<input type="reset" value="重置">
+
+使用图片提交
+<input type="image" src="http://how2j.cn/example.gif">
+
+按钮
+<button></button>即按钮标签
+与<input type="button">不同的是，标签功能更为丰富
+按钮标签里的内容可以是文字也可以是图像
+如果button的type="submit",那么它就具备提交form的功能
+
+<button><img src="http://how2j.cn/example.gif"/></button>
+<button type="submit">登陆</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<style>
+    td{
+        background-color:gray;
+    }
+</style>
+
+css的语法
+selector {property: value}
+
+<style>
+    p{
+        color:red;
+    }
+</style>
+<p style="color:red">这是style为红色的</p>
+
+
+
+选择器
+————————————————————————————————
+元素选择
+<style>
+    p{
+        color:red;
+    }
+</style>
+
+id选择
+<style>
+    #p1{
+        color:blue;
+    }
+</style>
+
+类选择
+<style>
+    .pre {
+        color: blue;
+    }
+</style>
+
+元素和类一起
+<style>
+    p.blue{
+        color:blue;
+    }
+</style>
+
+
+
+尺寸
+————————————————————————————————
+<style>
+    p#percentage{
+        width:50%;
+        height:50%;
+        background-color:pink;
+    }
+    p#pix{
+        width:180px;
+        height:50px;
+        background-color:green;
+    }
+</style>
+
+
+背景
+<style>
+    p.gray {background-color: gray;}
+    h1 {background-color: transparent}
+    h2 {background-color: rgb(250,0,255)}
+    h3 {background-color: #00ff00}
+</style>
+
+图片做背景
+<style>
+    div#test
+    {
+        background-image:url(/study/background.jpg);
+        width:200px;
+        height:100px;
+    }
+</style>
+
+背景重复
+<style>
+    div#norepeat
+    {
+        background-image:url(/study/background_small.jpg);
+        width:200px;
+        height:100px;
+        background-repeat: no-repeat;
+    }
+
+    div#repeat-x
+    {
+        background-image:url(/study/background_small.jpg);
+        width:200px;
+        height:100px;
+        background-repeat: repeat-x;
+    }
+</style>
+
+背景平铺
+<style>
+    div#contain
+    {
+        background-image:url(/study/background_small.jpg);
+        width:200px;
+        height:100px;
+        background-size: contain;
+    }
+</style>
+
+
+
+文字
+————————————————————————————————
+颜色
+<style>
+    div#colorful{
+        color:pink
+    }
+</style>
+
+
+对齐
+div是块级元素，其默认宽度是100%，所以文本有对齐的空间前提
+span看不出右对齐效果
+<style>
+    div#left{
+        text-align:left;
+    }
+    div#right{
+        text-align:right;
+    }
+    div#center{
+        text-align:center;
+    }
+    span#right{
+        text-align:center;
+    }
+</style>
+
+
+文本修饰
+<style type="text/css">
+    h1 {text-decoration: overline}
+    h2 {text-decoration: line-through}
+    h3 {text-decoration: underline}
+    h4 {text-decoration: blink}
+    .a {text-decoration: none}
+</style>
+
+
+行间距
+<style>
+    .p{
+        line-height:200%;
+    }
+</style>
+
+
+字符间距
+<style>
+    .p{
+        letter-spacing: 2;
+    }
+</style>
+
+
+单词间距
+<style>
+    .p{
+        word-spacing: 10;
+    }
+</style>
+
+首行缩进
+<style>
+    .p{
+        text-indent:50;
+    }
+</style>
+
+大小写
+<style>
+    p.u {text-transform:uppercase}
+    p.c {text-transform:capitalize}
+    p.l {text-transform:lowercase}
+</style>
+
+空白格
+normal 默认。多个空白格或者换行符会被合并成一个空白格
+pre 有多少空白格，显示多少空白格，相当于pre标签,如果长度超出父容器也不会换行。
+pre-wrap 有多少空白格，显示多少空白格，相当于pre标签,如果长度超出父容器，会换行。
+nowrap 一直不换行，直到使用br
+<style>
+    p.n {white-space:normal}
+    p.p {white-space:pre}
+    p.pw {white-space:pre-wrap}
+    p.nw {white-space:nowrap}
+</style>
+
+
+
+字体
+————————————————————————————————
+大小
+<style>
+    p.big{
+        font-size:30px;
+    }
+
+    p.small{
+        font-size:50%;
+    }
+
+    p.small2{
+        font-size:0.5em;
+    }
+</style>
+
+风格
+<style>
+    p.n{
+        font-style:normal;
+    }
+
+    p.i{
+        font-style:italic;
+    }
+</style>
+
+粗细
+<style>
+    p.n{
+        font-weight:normal;
+    }
+    p.b{
+        font-weight:bold;
+    }
+</style>
+
+放一起
+<style>
+    p.all{
+        font:italic bold 30px "Times New Roman";
+    }
+</style>
+
+
+
+鼠标样式
+————————————————————————————————
+<style>
+    span{
+        cursor:crosshair;
+    }
+</style>
+
+
+
+
+表格
+————————————————————————————————
+表格布局
+automatic; 单元格的大小由td的内容宽度决定
+fixed; 单元格的大小由td上设置的宽度决定
+<style>
+    table.t1{
+        table-layout:automatic;
+    }
+
+    table.t2{
+        table-layout:fixed;
+    }
+</style>
+
+表格边框
+<style>
+    table.t1{
+        border-collapse:separate;
+    }
+
+    table.t2{
+        border-collapse:collapse;
+    }
+</style>
+
+
+
+边框
+————————————————————————————————
+边框风格
+<style>
+    .solid{
+        border-style:solid;
+    }
+    .dotted{
+        border-style:dotted;
+    }
+    .dashed{
+        border-style:dashed;
+    }
+    .double{
+        border-style:double;
+    }
+</style>
+
+
+边框颜色
+<style>
+    .red{
+        border-style:solid;
+        border-color:red;
+    }
+</style>
+
+边框宽度
+<style>
+    .red{
+        border-style:solid;
+        border-color:red;
+        border-width:1px;
+    }
+</style>
+
+
+方向框
+<style>
+    div.lefttop{
+        width:150px;
+        height:150px;
+        border-top-style:solid;
+        border-top-color:red;
+        border-top-width: 50px;
+        border-left-style:solid;
+        border-left-color:blue;
+        border-left-width: 50px;
+        background-color:lightgray;
+    }
+
+    div.alldirection{
+        width:150px;
+        height:150px;
+        border-top-style:solid;
+        border-top-color:red;
+        border-top-width: 50px;
+        border-left-style:solid;
+        border-left-color:blue;
+        border-left-width: 50px;
+        border-bottom-style:solid;
+        border-bottom-color:green;
+        border-bottom-width: 50px;
+        border-right-style:solid;
+        border-right-color:yellow;
+        border-right-width: 50px;
+        background-color:lightgray;
+    }
+</style>
+
+
+
+内边距
+————————————————————————————————
+元素内边距
+指的是元素里的内容与边框之间的距离
+属性：
+padding-left: 左内边距
+padding-right: 右内边距
+padding-top: 上内边距
+padding-bottom: 下内边距
+padding: 上 右 下 左
+
+<style>
+    .pad-left{
+        border:5px solid red;
+        background-color:green;
+        padding-left:50px;
+    }
+</style>
+
+
+
+外边距
+————————————————————————————————
+指的是元素边框和元素边框之间的距离
+属性：
+margin-left: 左外边距
+margin-right: 右外边距
+margin-top: 上外边距
+margin-bottom: 下外边距
+
+<style>
+    .margin{
+        border:1px solid red;
+        background-color:green;
+        margin-left:10px;
+    }
+</style>
+
+
+超链状态
+————————————————————————————————
+<style>
+    a:link {color: #FF0000}
+    a:visited {color: #00FF00}
+    a:hover {color: #FF00FF}
+    a:active {color: #0000FF}
+</style>
+
+
+隐藏
+————————————————————————————————
+使用display:none; 隐藏一个元素，这个元素将不再占有原空间 “坑” 让出来了
+使用 visibility:hidden;隐藏一个元素，这个元素继续占有原空间，只是“看不见”
+<style>
+    div.d{
+        display:none;
+    }
+    div.v{
+        visibility:hidden;
+    }
+</style>
+
+
+css文件
+————————————————————————————————
+<link rel="stylesheet" type="text/css" href="http://how2j.cn/study/style.css" />
+
+
+
+绝对定位
+————————————————————————————————
+<style>
+    img#i1{
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        z-index:1;
+    }
+
+    img#i2{
+        position: absolute;
+        left: 60px;
+        top: 120px;
+        z-index:-1;
+    }
+</style>
+
+
+
+
+相对定位
+————————————————————————————————
+<style>
+    p.r{
+        position: relative;
+        left: 150px;
+        top: 50px;
+    }
+</style>
+
+
+
+
+
+
+左右固定
+————————————————————————————————
+<style>
+    .left{
+        width:200px;
+        float:left;
+        background-color:pink
+    }
+    .right{
+        width:200px;
+        float:right;
+        background-color:pink
+    }
+    .center {margin:0 200px;   background-color:lightblue}
+</style>
+
+
+
+贴在下方
+————————————————————————————————
+<style>
+    #div1
+    {
+        position: relative;
+        height: 300px;
+        width: 90%;
+        background-color: skyblue;
+    }
+    #div2
+    {
+        position: absolute;
+        bottom: 0;
+        height: 30px;
+        width: 100%;
+        background-color: lightgreen;
+    }
+</style>
+
+<div id="div1">
+    <div id="div2"> 无论蓝色div高度如何变化，绿色div都会贴在下面
+    </div>
+</div>
+
+
+
+
+
+————————————————————————————————
+
+
+
+————————————————————————————————
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
