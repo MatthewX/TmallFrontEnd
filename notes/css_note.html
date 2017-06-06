@@ -525,85 +525,64 @@ css文件
 
 
 
-
+居中
 ————————————————————————————————
+<style>
+    div{
+        border: solid 1px lightgray;
+        margin: 10px;
+    }
+    span{
+        border: solid 1px lightskyblue;
+    }
+</style>
+<div> 默认情况下div会占用100%的宽度,所以无法观察元素是否居中</div>
+
+<div style="width:300px;margin:0 auto">
+    设置本div的宽度，然后再使用样式 margin: 0 auto来使得元素居中</div>
+
+<span style="width:300px;margin:0 auto">
+  span 是内联元素，无法设置宽度，所以不能通过margin:0 auto居中</span>
+
+<div style="text-align:center">
+    <span>span的居中可以通过放置在div中，然后让div text-align实现居中</span>
+</div>
 
 
-
+布局
 ————————————————————————————————
+display:block; 表示块级元素
+块级元素会自动在前面和后面加上换行，并且在其上的width和height也能够生效
 
+div默认是块级元素
+span默认是内联元素(不会有换行,width和height也不会生效)
 
 
+display:inline; 表示内联元素
+内联元素前后没有换行，并且在其上的width和height也无效。 其大小由其中的内容决定
 
+div默认是块级元素
+span默认是内联元素
 
 
 
+内联是不换行，但是不能指定大小
+块级时能制定大小，但是会换行
 
+有时候，需要元素处于同一行，同时还能指定大小，这个时候，就需要用到内联-块级 inline-block
 
 
 
+两种方式都可以实现水平摆放，主要区别
+1. float 使用结束后需要清除浮动，inline-block不需要
+2. float 在元素高度不一致的情况下会出现包围现象， inline-block没有
+3. float 可以做到靠左 靠右， inline-block只能靠左
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------
+overflow: hidden;
+隐藏溢出部分。 结合图片div的float:left,就可以做到基本信息div和图片div水平摆放，并且基本信息div自动占用剩下所有的宽度
 
 
 
